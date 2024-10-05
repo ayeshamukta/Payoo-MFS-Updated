@@ -16,6 +16,8 @@ document.getElementById('add-btn').addEventListener('click',function(event)
     {
         const newBalance = parseFloat(addAmount) + parseFloat(currentBalance);
         document.getElementById('balance').innerText = newBalance;
+        addHistory("Added Money");
+
     }
     else
     {
@@ -46,10 +48,7 @@ document.getElementById('out-btn').addEventListener('click',function(event)
         return;
     }
 
-    
-    
-    
-    
+    addHistory("Cash Out");   
 })
 document.getElementById('transfer-btn').addEventListener('click',function(event)
 {
@@ -67,6 +66,7 @@ document.getElementById('transfer-btn').addEventListener('click',function(event)
         alert('Invalid Input');
         return;
     }
+    addHistory("Transfered Money");
 })
 document.getElementById('bonus-btn').addEventListener('click',function(event)
 {
@@ -86,7 +86,7 @@ document.getElementById('bonus-btn').addEventListener('click',function(event)
     }
 
     
-    
+    addHistory("Got Bonus");
     
     
 })
@@ -94,5 +94,6 @@ document.getElementById('paybill-btn').addEventListener('click',function(event)
 {
     event.preventDefault();
     document.getElementById('pay-bill-container').classList.add('hidden');
+    
     
 })

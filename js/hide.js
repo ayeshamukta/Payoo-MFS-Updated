@@ -23,8 +23,8 @@ document.getElementById('pay-bill').addEventListener('click',function()
         hide('pay-bill-container');
     }
 )
-// document.getElementById('transactions').addEventListener('click',function()
-//     {
-//         hide('transactions-container');
-//     }
-// )
+document.getElementById('transactions').addEventListener('click',function()
+    {
+        hide('transactions-container');
+    }
+)
