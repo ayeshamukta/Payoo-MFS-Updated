@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <main class="flex justify-center ">
+    <div class="mockup-phone ">
+        
+        <div class="display">
+          <div class="artboard artboard-demo phone-3 bg-white">
+            <!-- content -->
+             <div class="bg-base-100  w-full mb-4">
+                <div class="navbar flex justify-between px-6">
+                    <div class="grid grid-rows-2">
+                        <p>Available Balance</p>
+                        <p id="balance" class="font-bold">9400 TK</p>
+                      
+                    </div>
+                    <div class="">
+                      <div class="form-control">
+                        <button class="btn ">Log Out</button>
+                      </div>
+                     
+                    </div>
+                  </div>
+             </div>
+             <!-- <div class="divider"></div> -->
+             <div class="px-6">
+                <h3 class="font-bold text-2xl">Welcome to Payooooo!</h3>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+             </div>
+             <div class="divider"></div>
+             <!-- Buttons -->
+             <div class="grid grid-cols-3 px-6 gap-2 mb-4">
+                <button id="add-money" class="btn btn-lg">Add Money</button>
+                <button id="cash-out" class="btn btn-lg">Cash Out</button>
+                <button id="transfer-money" class="btn btn-lg">Transfer Money</button>
+                <button id="get-bonus" class="btn btn-lg">Get Bonus</button>
+                <button id="pay-bill" class="btn btn-lg">Pay Bill</button>
+                <button id="transactions" class="btn btn-lg ">Transactions</button>
+                
+                
+             </div>
+
+             <!-- add money -->
+              
+             <div id="add-container" class="card bg-base-100 w-[90%] shrink-0 shadow-2xl hidden">
+                <p class="text-center pt-4 font-bold text-lg">Add Money</p>
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount to Add</span>
+                    </label>
+                    <input id="add-num" type="text" placeholder="Add Amount to withdraw" class="input input-bordered rounded-full" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin Number</span>
+                    </label>
+                    <input id="add-pin" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered rounded-full" required />
+                    
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="add-btn" class="btn  btn-primary font-bold text-lg rounded-full">Add Money</button>
+                  </div>
+                </form>
+              </div>
+             <!-- cash out -->
+              
+             <div id="cash-container" class="card bg-base-100 w-[90%] shrink-0 shadow-2xl hidden">
+                <p class="text-center pt-4 font-bold text-lg">Cash Out</p>
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount to Withdraw</span>
+                    </label>
+                    <input id="out-num" type="text" placeholder="Enter amount to withdraw" class="input input-bordered rounded-full" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin Number</span>
+                    </label>
+                    <input id="out-pin" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered rounded-full" required />
+                    
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="out-btn" class="btn  btn-primary font-bold text-lg rounded-full">Cash out</button>
+                  </div>
+                </form>
+              </div>
+             <!-- Transfer Money -->
+              
+             <div id="transfer-container" class="card bg-base-100 w-[90%] shrink-0 shadow-2xl hidden">
+                <p class="text-center pt-4 font-bold text-lg">Transfer Money</p>
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount to transfer</span>
+                    </label>
+                    <input id="transfer-num" type="text" placeholder="Enter amount to transfer" class="input input-bordered rounded-full" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin Number</span>
+                    </label>
+                    <input id="transfer-pin" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered rounded-full" required />
+                    
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="transfer-btn" class="btn  btn-primary font-bold text-lg rounded-full">Send Now</button>
+                  </div>
+                </form>
+              </div>
+             <!-- Bonus Money -->
+              
+             <div id="bonus-container" class="card bg-base-100 w-[90%] shrink-0 shadow-2xl hidden">
+                <p class="text-center pt-4 font-bold text-lg">Get Bonus</p>
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Enter Bonus Coupon</span>
+                    </label>
+                    <input id="bonus-coupon" type="text" placeholder="Enter your coupon" class="input input-bordered rounded-full" required />
+                  </div>
+                 
+                  <div class="form-control mt-6">
+                    <button id="bonus-btn" class="btn  btn-primary font-bold text-lg rounded-full">Get Bonus</button>
+                  </div>
+                </form>
+              </div>
+             <!-- pay bill Money -->
+              
+             <div id="pay-bill-container" class="card bg-base-100 w-[90%] shrink-0 shadow-2xl hidden">
+                <p class="text-center pt-4 font-bold text-lg my-5 ">This Option isn't available right now.</p>
+                <button id="paybill-btn" class="btn  btn-primary">Home</button>
+              </div>
+
+              <!-- transactions -->
+              <div class="hero bg-base-200 min-h-screen">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                    class="max-w-sm rounded-lg shadow-2xl" />
+                  <div>
+                    <h1 class="text-5xl font-bold">Box Office News!</h1>
+                    <p class="py-6">
+                      Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                      quasi. In deleniti eaque aut repudiandae et a id nisi.
+                    </p>
+                    <button class="btn btn-primary">Get Started</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+   </main>
+   
+   <script src="js/hide.js"></script>
+   <s><script src="js/common-func.js"></script></s>
+   <script src="js/calc.js"></script>
+</body>
+</html>
